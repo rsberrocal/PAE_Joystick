@@ -22,14 +22,14 @@
  * @return Error code to be treated at higher levels.
  */
 int dyn_write_byte(uint8_t module_id, DYN_REG_t reg_addr, uint8_t reg_write_val) {
-	uint8_t parameters[2] ;
-	struct RxReturn reply;
+    uint8_t parameters[2];
+    struct RxReturn reply;
 
-	parameters[0] = reg_addr;
-	parameters[1] = reg_write_val;
-	reply = RxTxPacket(module_id, 2, DYN_INSTR__WRITE, parameters);
+    parameters[0] = reg_addr;
+    parameters[1] = reg_write_val;
+    reply = RxTxPacket(module_id, 2, DYN_INSTR__WRITE, parameters);
 
-	return (reply.tx_err < 1) | reply.time_out;
+    return (reply.tx_err < 1) | reply.time_out;
 }
 
 /**
@@ -43,16 +43,16 @@ int dyn_write_byte(uint8_t module_id, DYN_REG_t reg_addr, uint8_t reg_write_val)
  * @param[out] reg_read_val Pointer where the read value is stored
  * @return Error code to be treated at higher levels.
  */
-int dyn_read_byte(uint8_t module_id, DYN_REG_t reg_addr, uint8_t* reg_read_val) {
-	uint8_t parameters[2];
-	struct RxReturn reply;
+int dyn_read_byte(uint8_t module_id, DYN_REG_t reg_addr, uint8_t *reg_read_val) {
+    uint8_t parameters[2];
+    struct RxReturn reply;
 
-	parameters[0] = reg_addr;
-	parameters[1] = 1;
-	reply = RxTxPacket(module_id, 2, DYN_INSTR__READ, parameters);
-	*reg_read_val = reply.StatusPacket[5];
+    parameters[0] = reg_addr;
+    parameters[1] = 1;
+    reply = RxTxPacket(module_id, 2, DYN_INSTR__READ, parameters);
+    *reg_read_val = reply.StatusPacket[5];
 
-	return (reply.tx_err < 1) | reply.time_out;
+    return (reply.tx_err < 1) | reply.time_out;
 }
 
 /**
@@ -68,7 +68,18 @@ int dyn_read_byte(uint8_t module_id, DYN_REG_t reg_addr, uint8_t* reg_read_val) 
  * @return Error code to be treated at higher levels.
  */
 int dyn_write(uint8_t module_id, DYN_REG_t reg_addr, uint8_t *val, uint8_t len) {
-	//TODO: Implement multiposition write
-	return 255;
+    //TODO: Implement multiposition write
+    //Bucle para implementar distintas direcciones
+    //mirar wheel mode
+    int i, error;
+    for (i = 0; i < len; i++) {
+        error = dyn_write_byte(module_id, reg_addr, *val);
+        if (error > 0) {
+            return error;
+        }
+        reg_addr++;
+        val++;
+    }
+    return error;
 }
 

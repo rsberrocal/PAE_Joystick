@@ -4,28 +4,22 @@
 
 #include "dyn_motors.h"
 #include "dyn_frames.h"
+#include "dyn_instr.h"
 
 void wheelMode(byte idMotor) {
-    //Creating instruction
-    byte id = idMotor;//Not broadcasting for the emulator so setting the two motors manually
-    byte instruccion = 0x03; //WRITE_DATA
-    byte paramsLength = 5; //Number of data to write +1
-    byte parameters[16];
-
-    parameters[0] = 0x06;//Start at CW_ANGLE_LIMIT_L
-
-    parameters[1] = 0; // CW_ANGLE_LIMIT_L = 0
-    parameters[2] = 0; // CW_ANGLE_LIMIT_H = 0
-    parameters[3] = 0; // CCW_ANGLE_LIMIT_L = 0
-    parameters[4] = 0; // CCW_ANGLE_LIMIT_H = 0
-
-    TxPacket(id, paramsLength, instruccion, parameters);
+    //ID will not be broadcasting because the emulator, so setting the two motors manually
+    //start writing at CW_ANGLE_LIMIT_L
+    //params will be
+    byte params[4] = {0, 0, 0, 0};
+    // CW_ANGLE_LIMIT_L = 0
+    // CW_ANGLE_LIMIT_H = 0
+    // CCW_ANGLE_LIMIT_L = 0
+    // CCW_ANGLE_LIMIT_H = 0
+    dyn_write(idMotor, 0x06, params, 4);
 }
 
 //moveTo true -> right; false -> left
 void moveWheel(byte ID, bool moveTo, unsigned int speed) {
-
-    struct RxReturn returnPacket;
     byte speed_H, speed_L;
     speed_L = speed; //speed always will be les than 1024
 
@@ -36,17 +30,12 @@ void moveWheel(byte ID, bool moveTo, unsigned int speed) {
         speed_H = speed >> 8;
     }
 
-    byte instr = WRITE_DATA;//Write data
-    byte paramsLength = 3;
-    byte parameters[16];
-
-    parameters[0] = MOV_SPEED_L; //Start at mov speed low
-
-    parameters[1] = speed_L; //write low
-    parameters[2] = speed_H; //write high
-
-    TxPacket(ID, paramsLength, instr, parameters);
-    returnPacket = RxPacket();
+    //Start at mov speed low
+    byte params[2] = {speed_L, speed_H};
+    //params will be
+    // MOV_SPEED_L = speed_L
+    // MOV_SPEED_H = speed_H
+    dyn_write(ID, MOV_SPEED_L, params, 2);
 }
 
 void stop(void) {
