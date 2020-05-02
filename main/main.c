@@ -9,6 +9,7 @@
 #include "../dyn_test/dyn_emu.h"
 #include "../dyn_test/b_queue.h"
 #include "../joystick_emu/joystick.h"
+#include "../dyn/dyn_motors.h"
 
 uint8_t estado = Ninguno, estado_anterior = Ninguno, finalizar = 0;
 /**
@@ -43,6 +44,11 @@ int main(void)
 	printf("MAIN: Getting LED value \n");
     dyn_led_read(1, &tmp);
     assert(tmp == 1);
+
+    wheelMode(0x01);
+    dyn_rea
+    assert(t)
+    wheelMode(0x02);
 
 
 	printf("************************\n");
