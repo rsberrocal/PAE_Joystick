@@ -1,7 +1,3 @@
-//
-// Created by Rocho on 18/04/2020.
-//
-
 #include "dyn_motors.h"
 #include "dyn_frames.h"
 #include "dyn_instr.h"
@@ -35,45 +31,36 @@ void moveWheel(byte ID, bool moveTo, unsigned int speed) {
     //params will be
     // MOV_SPEED_L = speed_L
     // MOV_SPEED_H = speed_H
-    dyn_write(ID, MOV_SPEED_L, params, 2);
+    dyn_write(ID, 0x20, params, 2);
 }
 
 void stop(void) {
-    //With
+    //To stop set all wheels without rotation and no speed
     moveWheel(RIGHT_WHEEL, false, 0);
     moveWheel(LEFT_WHEEL, false, 0);
 }
 
 void turnLeft(unsigned int speed) {
     if (speed < MAX_SPEED) {
-        moveWheel(RIGHT_WHEEL, true, speed);
-        moveWheel(LEFT_WHEEL, true, 0);
-    }
-}
-
-void turnOnItselfLeft(unsigned int speed) {
-    if (speed < MAX_SPEED) {
-        moveWheel(RIGHT_WHEEL, true, speed);
-        moveWheel(LEFT_WHEEL, true, speed);
+        //To go left right wheel to left and move it with speed
+        //Left wheel is stopped
+        moveWheel(RIGHT_WHEEL, false, speed);
+        moveWheel(LEFT_WHEEL, false, 0);
     }
 }
 
 void turnRight(unsigned int speed) {
     if (speed < MAX_SPEED) {
-        moveWheel(RIGHT_WHEEL, false, 0);
-        moveWheel(LEFT_WHEEL, false, speed);
-    }
-}
-
-
-void turnOnItselfRight(unsigned int speed) {
-    if (speed < MAX_SPEED) {
-        moveWheel(RIGHT_WHEEL, false, speed);
-        moveWheel(LEFT_WHEEL, false, speed);
+        //To go right left wheel to right and move it with speed
+        //Right wheel is stopped
+        moveWheel(RIGHT_WHEEL, true, 0);
+        moveWheel(LEFT_WHEEL, true, speed);
     }
 }
 
 void forward(unsigned int speed) {
+    //To move forward set one wheels to right and the other to left
+    // all have the same speed
     if (speed < MAX_SPEED) {
         moveWheel(RIGHT_WHEEL, true, speed);
         moveWheel(LEFT_WHEEL, false, speed);
@@ -81,6 +68,8 @@ void forward(unsigned int speed) {
 }
 
 void backward(unsigned int speed) {
+    //To go backward set the wheels in reverse to forward
+    // all have the same speed
     if (speed < MAX_SPEED) {
         moveWheel(RIGHT_WHEEL, false, speed);
         moveWheel(LEFT_WHEEL, true, speed);

@@ -12,21 +12,13 @@ stdint.h
 stdbool.h
 -
 
-/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_instr.h
-stdint.h
--
-stdbool.h
--
-
-/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_motors.c
-dyn_motors.h
-/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_motors.h
-dyn_frames.h
-/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_frames.h
+/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_instr.c
 dyn_instr.h
 /cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_instr.h
+dyn_frames.h
+/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_frames.h
 
-/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_motors.h
+/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_instr.h
 stdint.h
 -
 stdbool.h

@@ -10,7 +10,8 @@
 #include "dyn_app_sensor.h"
 #include "dyn_instr.h"
 
-int readObsDetDistance(byte ID, byte postion) {
+
+int distanceToGetObstacle(byte ID, byte postion) {
     int distance;
     byte param[1];
     param[0] = 1;
@@ -34,7 +35,10 @@ int sensorRead(byte ID, byte sensor) {
 
 
 int getObstacleFlag(byte ID) {
-    //flags 2 detected in sensor right; 1 detected in sensor center; 0 detected in sensor left
+    //flags
+    // 2 detected in sensor right
+    // 1 detected in sensor center
+    // 0 detected in sensor left
     byte flags;
     byte param[1];
     param[0] = 1;

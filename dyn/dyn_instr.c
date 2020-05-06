@@ -68,15 +68,15 @@ int dyn_read_byte(uint8_t module_id, DYN_REG_t reg_addr, uint8_t *reg_read_val) 
  * @return Error code to be treated at higher levels.
  */
 int dyn_write(uint8_t module_id, DYN_REG_t reg_addr, uint8_t *val, uint8_t len) {
-    //TODO: Implement multiposition write
-    //Bucle para implementar distintas direcciones
-    //mirar wheel mode
     int i, error;
+    //For every instruccion on the array val, call dyn_write_byte with his parameter and value.
     for (i = 0; i < len; i++) {
         error = dyn_write_byte(module_id, reg_addr, *val);
-        if (error > 0) {
+        //return if has error
+        if (error == 0) {
             return error;
         }
+        //go to the next value
         reg_addr++;
         val++;
     }

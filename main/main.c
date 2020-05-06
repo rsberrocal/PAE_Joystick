@@ -2,8 +2,8 @@
 #include <signal.h>
 #include <assert.h>
 #include <stdio.h>
-#include <semaphore.h> //añadido para que compile
-#include <fcntl.h> //añadido para que compile
+#include <semaphore.h> //Added to compile
+#include <fcntl.h> //Added to compile
 #include "main.h"
 #include "../dyn/dyn_app_common.h"
 #include "../dyn_test/dyn_emu.h"
@@ -19,7 +19,6 @@ uint8_t estado = Ninguno, estado_anterior = Ninguno, finalizar = 0;
 int main(void) {
     pthread_t tid, jid;
     uint8_t tmp;
-    int tmpInt;
 
     //Init semaphores for TX data handshake
     sem_unlink("/semaphore_tx_msp");
@@ -47,29 +46,88 @@ int main(void) {
     assert(tmp == 1);
 
     printf("MAIN: Setting the left Motor(2) \n");
-    endlessTurn(2);
-    checkRegister(2, CCW_ANGLE_LIMIT_L, &tmp);
+    endlessTurn(RIGHT_WHEEL);
+    checkRegister(RIGHT_WHEEL, CCW_ANGLE_LIMIT_L, &tmp);
     assert(tmp == 0);
-    checkRegister(2, CCW_ANGLE_LIMIT_H, &tmp);
+    checkRegister(RIGHT_WHEEL, CCW_ANGLE_LIMIT_H, &tmp);
     assert(tmp == 0);
-    checkRegister(2, CW_ANGLE_LIMIT_L, &tmp);
+    checkRegister(RIGHT_WHEEL, CW_ANGLE_LIMIT_L, &tmp);
     assert(tmp == 0);
-    checkRegister(2, CW_ANGLE_LIMIT_H, &tmp);
+    checkRegister(RIGHT_WHEEL, CW_ANGLE_LIMIT_H, &tmp);
     assert(tmp == 0);
 
 
-    printf("MAIN: Setting the right Motor(3) \n");
-    endlessTurn(3);
-    checkRegister(3, CCW_ANGLE_LIMIT_L, &tmp);
+    printf("\nMAIN: Setting the right Motor(3) \n");
+    endlessTurn(LEFT_WHEEL);
+    checkRegister(LEFT_WHEEL, CCW_ANGLE_LIMIT_L, &tmp);
     assert(tmp == 0);
-    checkRegister(3, CCW_ANGLE_LIMIT_H, &tmp);
+    checkRegister(LEFT_WHEEL, CCW_ANGLE_LIMIT_H, &tmp);
     assert(tmp == 0);
-    checkRegister(3, CW_ANGLE_LIMIT_L, &tmp);
+    checkRegister(LEFT_WHEEL, CW_ANGLE_LIMIT_L, &tmp);
     assert(tmp == 0);
-    checkRegister(3, CW_ANGLE_LIMIT_H, &tmp);
+    checkRegister(LEFT_WHEEL, CW_ANGLE_LIMIT_H, &tmp);
     assert(tmp == 0);
     //wheelMode(0x02);
 
+    printf("\nMAIN: FORWARD\n");
+    forward(200);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 200);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 4);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 200);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 0);
+
+    printf("\nMAIN: STOP\n");
+    stop();
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 0);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 0);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 0);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 0);
+
+
+    printf("\nMAIN: Turn left \n");
+    turnLeft(150);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 150);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 0);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 0);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 0);
+
+    stop();
+
+    printf("\nMAIN: Turn right \n");
+    turnRight(150);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 0);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 4);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 150);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 4);
+
+    stop();
+
+    printf("\nMAIN: Backward \n");
+    backward(200);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 200);
+    checkRegister(RIGHT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 0);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_L, &tmp);
+    assert(tmp == 200);
+    checkRegister(LEFT_WHEEL, MOV_SPEED_H, &tmp);
+    assert(tmp == 4);
 
     printf("************************\n");
     printf("Test passed successfully\n");
@@ -85,26 +143,6 @@ int main(void) {
             switch (estado) {
                 case Sw1:
                     printf("Boton Sw1 ('a') apretado\n");
-                    printf("MAIN:Moving to left and stop \n");
-                    turnLeft(1000);
-                    checkRegister(2, MOV_SPEED_L, (uint8_t *) &tmpInt);
-                    assert(tmpInt == 1000);
-                    checkRegister(2, MOV_SPEED_H, (uint8_t *) &tmpInt);
-                    assert(tmpInt == 4);
-                    checkRegister(3, MOV_SPEED_L, (uint8_t *) &tmpInt);
-                    assert(tmpInt == 0);
-                    checkRegister(3, MOV_SPEED_H, (uint8_t *) &tmpInt);
-                    assert(tmpInt == 4);
-                    printf("Stoping \n");
-                    stop();
-                    checkRegister(2, MOV_SPEED_L, (uint8_t *) &tmpInt);
-                    assert(tmpInt == 0);
-                    checkRegister(2, MOV_SPEED_H, (uint8_t *) &tmpInt);
-                    assert(tmpInt == 0);
-                    checkRegister(3, MOV_SPEED_L, (uint8_t *) &tmpInt);
-                    assert(tmpInt == 0);
-                    checkRegister(3, MOV_SPEED_H, (uint8_t *) &tmpInt);
-                    assert(tmpInt == 0);
                     break;
                 case Sw2:
                     printf("Boton Sw2 ('s') apretado\n");

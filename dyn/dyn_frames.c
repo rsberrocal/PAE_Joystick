@@ -86,16 +86,15 @@ struct RxReturn RxPacket(void) {
     //TODO: Decode packet and verify checksum
     byte bChecksum = 0;
     if (!respuesta.time_out) {
-        byte bLenght = respuesta.StatusPacket[3] + 4;
+        byte bLenght = respuesta.StatusPacket[3] + 4; //get the lenght of the instruction
         for (bCount = 2; bCount < bLenght - 1; bCount++) {
-            bChecksum += respuesta.StatusPacket[bCount];
+            bChecksum += respuesta.StatusPacket[bCount]; //sum all the instruccions
         }
         bChecksum = ~bChecksum;
-        if (respuesta.StatusPacket[bLenght - 1] != bChecksum) { // comprovem el checksum
-            respuesta.tx_err = true; // error si no coincideix
+        if (respuesta.StatusPacket[bLenght - 1] != bChecksum) { // check is valid
+            respuesta.tx_err = true; // make error if is not valid
         }
     }
-    //si que hay hacerlo
 
     return respuesta;
 }

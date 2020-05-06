@@ -13,7 +13,7 @@
 
 typedef uint8_t byte;
 
-int readObsDetDistance(byte ID, byte position);
+int distanceToGetObstacle(byte ID, byte position);
 
 int sensorRead(byte ID, byte sensor);
 
