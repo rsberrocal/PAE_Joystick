@@ -6,7 +6,7 @@
 #include "dyn_frames.h"
 #include "dyn_instr.h"
 
-void wheelMode(byte idMotor) {
+void endlessTurn(byte idMotor) {
     //ID will not be broadcasting because the emulator, so setting the two motors manually
     //start writing at CW_ANGLE_LIMIT_L
     //params will be
@@ -39,6 +39,7 @@ void moveWheel(byte ID, bool moveTo, unsigned int speed) {
 }
 
 void stop(void) {
+    //With
     moveWheel(RIGHT_WHEEL, false, 0);
     moveWheel(LEFT_WHEEL, false, 0);
 }
@@ -84,8 +85,4 @@ void backward(unsigned int speed) {
         moveWheel(RIGHT_WHEEL, false, speed);
         moveWheel(LEFT_WHEEL, true, speed);
     }
-}
-
-void endlessTurn(unsigned int speed) {
-
 }

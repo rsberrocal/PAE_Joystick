@@ -29,7 +29,7 @@
 
 typedef uint8_t byte;
 
-void wheelMode(byte idMotor);//to set wheels
+void endlessTurn(byte idMotor);//to set wheels
 
 //moveTo -> true Right; false Left
 void moveWheel(byte ID, bool moveTo, unsigned int speed);
@@ -49,6 +49,5 @@ void forward(unsigned int speed);
 
 void backward(unsigned int speed);
 
-void endlessTurn(unsigned int speed);
 
 #endif //JOYSTICK_DYN_MOTORS_H

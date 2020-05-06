@@ -48,10 +48,10 @@ RM = /cygdrive/c/Users/Rocho/AppData/Local/JetBrains/CLion2020.1/cygwin_cmake/bi
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick
+CMAKE_SOURCE_DIR = /cygdrive/e/Universidad/PAE/PAE_Joystick
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/CMakeFiles /cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/CMakeFiles /cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -230,6 +230,33 @@ dyn/dyn_instr.s: dyn/dyn_instr.c.s
 dyn/dyn_instr.c.s:
 	$(MAKE) -f CMakeFiles/Joystick.dir/build.make CMakeFiles/Joystick.dir/dyn/dyn_instr.c.s
 .PHONY : dyn/dyn_instr.c.s
+
+dyn/dyn_motors.o: dyn/dyn_motors.c.o
+
+.PHONY : dyn/dyn_motors.o
+
+# target to build an object file
+dyn/dyn_motors.c.o:
+	$(MAKE) -f CMakeFiles/Joystick.dir/build.make CMakeFiles/Joystick.dir/dyn/dyn_motors.c.o
+.PHONY : dyn/dyn_motors.c.o
+
+dyn/dyn_motors.i: dyn/dyn_motors.c.i
+
+.PHONY : dyn/dyn_motors.i
+
+# target to preprocess a source file
+dyn/dyn_motors.c.i:
+	$(MAKE) -f CMakeFiles/Joystick.dir/build.make CMakeFiles/Joystick.dir/dyn/dyn_motors.c.i
+.PHONY : dyn/dyn_motors.c.i
+
+dyn/dyn_motors.s: dyn/dyn_motors.c.s
+
+.PHONY : dyn/dyn_motors.s
+
+# target to generate assembly for a file
+dyn/dyn_motors.c.s:
+	$(MAKE) -f CMakeFiles/Joystick.dir/build.make CMakeFiles/Joystick.dir/dyn/dyn_motors.c.s
+.PHONY : dyn/dyn_motors.c.s
 
 dyn_test/b_queue.o: dyn_test/b_queue.c.o
 
@@ -387,6 +414,9 @@ help:
 	@echo "... dyn/dyn_instr.o"
 	@echo "... dyn/dyn_instr.i"
 	@echo "... dyn/dyn_instr.s"
+	@echo "... dyn/dyn_motors.o"
+	@echo "... dyn/dyn_motors.i"
+	@echo "... dyn/dyn_motors.s"
 	@echo "... dyn_test/b_queue.o"
 	@echo "... dyn_test/b_queue.i"
 	@echo "... dyn_test/b_queue.s"

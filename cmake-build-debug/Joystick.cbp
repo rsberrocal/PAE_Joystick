@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Joystick">
-				<Option output="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Joystick.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug"/>
+				<Option output="/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Joystick.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -39,15 +39,15 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 Joystick"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 Joystick"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Joystick/fast">
-				<Option output="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Joystick.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug"/>
+				<Option output="/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Joystick.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -57,81 +57,87 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 Joystick/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 Joystick/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/e/Universidad/PAE/PAE_Joystick/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn/dyn_app_common.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_app_common.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn/dyn_app_common.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_app_common.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn/dyn_app_sensor.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_app_sensor.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn/dyn_app_sensor.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_app_sensor.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn/dyn_frames.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_frames.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn/dyn_frames.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_frames.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn/dyn_instr.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_instr.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn/dyn_instr.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_instr.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn_test/b_queue.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_motors.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn_test/b_queue.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn/dyn_motors.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn_test/dyn_emu.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn_test/b_queue.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn_test/dyn_emu.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn_test/b_queue.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/dyn_test/fake_msp.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn_test/dyn_emu.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/hal_dyn_uart/hal_dyn_uart_emu.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn_test/dyn_emu.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/hal_dyn_uart/hal_dyn_uart_emu.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/dyn_test/fake_msp.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/joystick_emu/joystick.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/hal_dyn_uart/hal_dyn_uart_emu.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/joystick_emu/joystick.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/hal_dyn_uart/hal_dyn_uart_emu.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/main/main.c">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/joystick_emu/joystick.c">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/main/main.h">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/joystick_emu/joystick.h">
 			<Option target="Joystick"/>
 		</Unit>
-		<Unit filename="/cygdrive/e/Universidad/PAE/JoystickCarla/PaeJoystick/CMakeLists.txt">
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/main/main.c">
+			<Option target="Joystick"/>
+		</Unit>
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/main/main.h">
+			<Option target="Joystick"/>
+		</Unit>
+		<Unit filename="/cygdrive/e/Universidad/PAE/PAE_Joystick/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

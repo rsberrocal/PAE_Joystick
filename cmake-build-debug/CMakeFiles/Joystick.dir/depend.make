@@ -5,6 +5,8 @@ CMakeFiles/Joystick.dir/dyn/dyn_app_common.c.o: ../dyn/dyn_app_common.c
 CMakeFiles/Joystick.dir/dyn/dyn_app_common.c.o: ../dyn/dyn_instr.h
 
 CMakeFiles/Joystick.dir/dyn/dyn_app_sensor.c.o: ../dyn/dyn_app_sensor.c
+CMakeFiles/Joystick.dir/dyn/dyn_app_sensor.c.o: ../dyn/dyn_app_sensor.h
+CMakeFiles/Joystick.dir/dyn/dyn_app_sensor.c.o: ../dyn/dyn_instr.h
 
 CMakeFiles/Joystick.dir/dyn/dyn_frames.c.o: ../dyn/dyn_frames.c
 CMakeFiles/Joystick.dir/dyn/dyn_frames.c.o: ../dyn/dyn_frames.h
@@ -15,6 +17,11 @@ CMakeFiles/Joystick.dir/dyn/dyn_frames.c.o: ../hal_dyn_uart/hal_dyn_uart_emu.h
 CMakeFiles/Joystick.dir/dyn/dyn_instr.c.o: ../dyn/dyn_frames.h
 CMakeFiles/Joystick.dir/dyn/dyn_instr.c.o: ../dyn/dyn_instr.c
 CMakeFiles/Joystick.dir/dyn/dyn_instr.c.o: ../dyn/dyn_instr.h
+
+CMakeFiles/Joystick.dir/dyn/dyn_motors.c.o: ../dyn/dyn_frames.h
+CMakeFiles/Joystick.dir/dyn/dyn_motors.c.o: ../dyn/dyn_instr.h
+CMakeFiles/Joystick.dir/dyn/dyn_motors.c.o: ../dyn/dyn_motors.c
+CMakeFiles/Joystick.dir/dyn/dyn_motors.c.o: ../dyn/dyn_motors.h
 
 CMakeFiles/Joystick.dir/dyn_test/b_queue.c.o: ../dyn_test/b_queue.c
 CMakeFiles/Joystick.dir/dyn_test/b_queue.c.o: ../dyn_test/b_queue.h
@@ -39,6 +46,7 @@ CMakeFiles/Joystick.dir/joystick_emu/joystick.c.o: ../joystick_emu/joystick.h
 CMakeFiles/Joystick.dir/joystick_emu/joystick.c.o: ../main/main.h
 
 CMakeFiles/Joystick.dir/main/main.c.o: ../dyn/dyn_app_common.h
+CMakeFiles/Joystick.dir/main/main.c.o: ../dyn/dyn_motors.h
 CMakeFiles/Joystick.dir/main/main.c.o: ../dyn_test/b_queue.h
 CMakeFiles/Joystick.dir/main/main.c.o: ../dyn_test/dyn_emu.h
 CMakeFiles/Joystick.dir/main/main.c.o: ../joystick_emu/joystick.h
